@@ -1,0 +1,104 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 19, 2024 at 01:31 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `future brithers`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_data`
+--
+
+CREATE TABLE `client_data` (
+  `Fname` varchar(50) NOT NULL,
+  `Sname` varchar(50) NOT NULL,
+  `ID` varchar(50) NOT NULL,
+  `TEL` varchar(50) NOT NULL,
+  `DISTRICT` varchar(50) NOT NULL,
+  `SECTOR` varchar(50) NOT NULL,
+  `ARIVAL_TIME` datetime(5) NOT NULL,
+  `LEAVING_TIME` datetime(5) NOT NULL,
+  `NO_OF_ROOM` varchar(50) NOT NULL,
+  `PATTENERS` varchar(50) NOT NULL,
+  `GENDER` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members_info`
+--
+
+CREATE TABLE `members_info` (
+  `NAME` varchar(255) NOT NULL,
+  `gmail` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `members_info`
+--
+
+INSERT INTO `members_info` (`NAME`, `gmail`, `tel`, `password`) VALUES
+('', '', '', ''),
+('', '', '', ''),
+('fanny', 'fanny@gmail.com', '0788832132', '12321'),
+('gatete', 'joel\"gmail.com', '0781651986', '1998'),
+('abimana', '', '01112', '111'),
+('media', 'media@gmail.com', '078222222', '12345'),
+('clarisse', 'clar@gmail.com', '0788507899', 'nelis'),
+('Marthe', 'niyo@gmail.com', '0788426207', 'nell'),
+('[value-1]', '[value-2]', '[value-3]', '[value-4]'),
+('joel gatete', 'joll@gmail.com', '0787070843', '`1234'),
+('UWITURWINEZA Manzi Ange Celse', 'angecelse3@gmail.com', '0781651986', '222011729');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shares_reception`
+--
+
+CREATE TABLE `shares_reception` (
+  `Name` varchar(23) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `shares_reception`
+--
+
+INSERT INTO `shares_reception` (`Name`) VALUES
+(NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `client_data`
+--
+ALTER TABLE `client_data`
+  ADD PRIMARY KEY (`ID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
